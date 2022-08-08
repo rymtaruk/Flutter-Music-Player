@@ -13,6 +13,8 @@ This is Music Player application
 ## Library used
 1. [dio](https://pub.dev/packages/dio) for hitting API/Web Server
 2. [AudioPlayers](https://pub.dev/packages/audioplayers) for play audio by URL
+3. [injectable](https://pub.dev/packages/injectable) for Dependency Injection 
+4. [provider](https://pub.dev/packages/provider) for state management
 
 ### Flutter Commands
 #### Update Dependencies
