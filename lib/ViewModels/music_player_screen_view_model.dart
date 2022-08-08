@@ -15,7 +15,6 @@ class MusicPlayerScreenViewModel extends BaseViewModel {
   final audioPlayer = AudioPlayer(playerId: "music_player_test");
   final TextEditingController searchTextBarController = TextEditingController();
 
-  //FIELDS
   ResultModel? _selectedTrack;
   double? _duration;
   double? _sliderValueHolder;
@@ -26,7 +25,6 @@ class MusicPlayerScreenViewModel extends BaseViewModel {
   List<ResultModel>? _listTrack;
   Network network = Network();
 
-  //PROPERTIES
   double get sliderValueHolder => _sliderValueHolder ?? 0;
   String? get textField1 => _textField1;
 
@@ -40,7 +38,6 @@ class MusicPlayerScreenViewModel extends BaseViewModel {
 
   double? get duration => _duration;
 
-  //SERVICES
   final IMusicRepository _repository = getIt<MusicRepositoriesImpl>();
 
   Future<void> onSearchTextChange() async {
@@ -51,7 +48,6 @@ class MusicPlayerScreenViewModel extends BaseViewModel {
     }
 
     _debounce = Timer(const Duration(milliseconds: 500), () async {
-      // do something with query
       final temp = await _repository.getMusicByTitle(
           network, searchTextBarController.text);
 
