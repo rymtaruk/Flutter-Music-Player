@@ -14,12 +14,12 @@ This is Music Player application
 1. [dio](https://pub.dev/packages/dio) for hitting API/Web Server
 2. [AudioPlayers](https://pub.dev/packages/audioplayers) for play audio by URL
 
-## Flutter Commands
-### :=> Update Dependencies
+### Flutter Commands
+#### Update Dependencies
 flutter pub get
-### :=> To Build GETIt Service Locator Instance
+#### To Build GETIt Service Locator Instance
 flutter packages pub run build_runner build --delete-conflicting-outputs
-### :=> To Clean Generated File
+#### To Clean Generated File
 flutter packages pub run build_runner clean
 
 ### Code Scaffolding And MVVM References:
