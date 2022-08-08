@@ -22,11 +22,13 @@ class _ListViewTaskItemState extends State<ListViewTaskItem> {
 
   @override
   Widget build(BuildContext context) {
+    final album = widget.trackData?.collectionName ?? '';
+    final artist = widget.trackData?.artistName ?? '';
     return Card(
       child: ListTile(
         leading: Image.network(widget.trackData?.artworkUrl100 ?? ''),
         title: Text(widget.trackData?.trackName ?? ''),
-        subtitle: Text(widget.trackData?.collectionName ?? ''),
+        subtitle: Text('$album\n$artist'),
         trailing: const Icon(Icons.more_vert),
         isThreeLine: true,
         onTap: () => onItemSelected(),
